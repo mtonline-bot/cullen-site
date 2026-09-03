@@ -1,0 +1,85 @@
+/* Cullen's site — paper and ink. No scripts, no trackers, no external requests. */
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+  color: #1c1c1c;
+  background: #fbfaf7;
+}
+
+a { color: #1c1c1c; }
+
+nav {
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: .95rem;
+  border-bottom: 1px solid #d8d4cb;
+  padding-bottom: .6rem;
+  margin-bottom: 2rem;
+}
+nav a { text-decoration: none; margin-right: 1.25rem; }
+nav a.here { border-bottom: 2px solid #1c1c1c; padding-bottom: .1rem; }
+nav .name { font-weight: 600; margin-right: 1.25rem; }
+
+h1 { font-size: 1.6rem; font-weight: normal; margin: 0 0 .75rem; }
+
+.lead {
+  font-size: 1.05rem;
+  color: #3a3a3a;
+  margin-bottom: 2.5rem;
+}
+
+p { margin: 0 0 1rem; }
+
+hr.rule {
+  border: none;
+  text-align: center;
+  margin: 1.5rem auto;
+}
+hr.rule::after { content: "—"; color: #8a857a; }
+
+.piece { margin-bottom: 3rem; }
+.piece h2 { font-size: 1.15rem; font-weight: normal; margin: 0 0 .15rem; }
+.piece .date { color: #6d685e; font-size: .9rem; margin-bottom: 1rem; }
+
+.poem p { margin: 0 0 1.2rem; }
+.poem { font-style: normal; }
+
+.actions { margin: 2.5rem 0; }
+.actions a {
+  display: inline-block;
+  border: 1px solid #1c1c1c;
+  padding: .55rem 1.1rem;
+  text-decoration: none;
+  margin-right: .75rem;
+  margin-bottom: .5rem;
+}
+
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0 0 2rem; }
+.steps li { margin-bottom: 1rem; padding-left: 2.2rem; position: relative; }
+.steps li::before {
+  counter-increment: step;
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  color: #6d685e;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+}
+
+.meta { color: #6d685e; font-size: .9rem; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d8d4cb;
+  color: #6d685e;
+  font-size: .85rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+}
+footer a { color: #6d685e; }
+
+h2.legal { font-size: 1.05rem; margin-top: 2rem; }
